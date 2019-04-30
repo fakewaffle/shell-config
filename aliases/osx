@@ -4,10 +4,9 @@ if [[ $(uname -s) == "Darwin" ]]; then
     alias copy="pbcopy"
     alias paste="pbpaste"
 
-    # Applications
+	alias tunnel="sshuttle --dns -r home 0/0 -vv"
+    alias remove-dsstore="find . -name '*.DS_Store' -type f -delete"
+
     alias chrome="open -a 'Google Chrome'"
     alias safari="open -a 'Safari'"
-
-    alias fix-osx-plex="sudo codesign --force --sign - /Applications/Plex\ Home\ Theater.app/"
-    alias remove-dsstore="find . -name '*.DS_Store' -type f -delete"
 fi

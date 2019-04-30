@@ -2,8 +2,6 @@
 
 if hash docker 2>/dev/null; then
 
-	alias docker='nocorrect docker'
-
 	# Get latest container ID
 	alias dl="docker ps -l -q"
 
@@ -38,7 +36,7 @@ if hash docker 2>/dev/null; then
 	alias drma='docker rm $(docker ps -a -q)'
 
 	# Stop and Remove all containers
-	alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
+	alias drmf='docker rm -fv $(docker ps -a -q)'
 
 	# Remove all images
 	alias dri='docker rmi $(docker images -q)'

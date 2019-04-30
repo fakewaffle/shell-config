@@ -23,10 +23,6 @@ if [[ $(uname -s) == "Darwin" ]]; then
 	done
 fi
 
-for file in $HOME/.shell-config/setup/*; do
-	chmod +x $file
-done
-
 for theme in $HOME/.shell-config/themes/*; do
 	filename="${theme##*/}"
 	target=$HOME/.oh-my-zsh/themes/$filename

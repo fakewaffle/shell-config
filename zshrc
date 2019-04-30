@@ -27,7 +27,7 @@ ZSH_THEME="fakewaffle"
 DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -57,6 +57,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+
+unsetopt inc_append_history
+unsetopt share_history
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

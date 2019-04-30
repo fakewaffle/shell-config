@@ -1,13 +1,22 @@
 #!/bin/sh
 
+TRAPINT() {
+    print -n "^C"
+    return $(( 128 + $1 ))
+}
+
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 HOSTNAME=`hostname -s`
 
 case "$HOSTNAME" in
-  (dev-mbp-jmorris) color="green";;
-  (adams)           color="green";;
-  (*)               color="red";;
+  (justinmorris)         color="green";;
+  (justin-morris)        color="green";;
+  (justin-morris-mbp)    color="green";;
+  (justin-morris-vivint) color="green";;
+  (justin-morris-vslr)   color="green";;
+  (fakewaffle)           color="green";;
+  (*)                    color="red";;
 esac
 
 # ls after each cd
